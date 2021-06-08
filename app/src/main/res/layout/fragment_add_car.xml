@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCarFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/locationFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/location_background"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:radius="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/location_icon_alternative"
+                android:visibility="gone"
+                android:src= "@drawable/ic_baseline_location_on_24"
+                app:tint="?attr/colorOnPrimary" />
+
+            <ImageView
+                android:id="@+id/noLocation"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/no_location_icon_alternative"
+                android:src="@drawable/ic_baseline_location_off_24"
+                android:visibility="gone"
+                app:tint="?attr/colorOnPrimary" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:textColor="?attr/colorOnPrimary"
+                android:paddingRight="8dp"
+                android:text="@string/location_is_searched" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cameraIcon"
+            android:layout_width="match_parent"
+            android:layout_height="157dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/camera_icon_alternative"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationFrame"
+            app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+            tools:srcCompat="@drawable/ic_launcher_background" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="157dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/photo_alternative"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationFrame"
+            app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+            tools:srcCompat="@drawable/ic_launcher_background" />
+
+        <EditText
+            android:id="@+id/carModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/car_model_label"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:nextFocusDown="@+id/licence_plate"
+            android:importantForAutofill="no" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carModel">
+
+
+            <EditText
+                android:id="@+id/licence_plate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/licence_plate_label"
+                android:inputType="textNoSuggestions"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carModel"
+                android:nextFocusDown="@+id/level"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="13dp"
+                android:layout_weight="2"
+                android:ems="10"
+                android:hint="@string/level_label"
+                android:inputType="number"
+                app:layout_constraintEnd_toStartOf="@+id/spot"
+                app:layout_constraintHorizontal_bias="0.439"
+                app:layout_constraintStart_toEndOf="@+id/licence_plate"
+                app:layout_constraintTop_toBottomOf="@+id/carModel"
+                android:nextFocusDown="@+id/spot"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/spot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="2"
+                android:ems="10"
+                android:hint="@string/parking_spot_label"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carModel"
+                android:nextFocusDown="@+id/annotation"
+                android:importantForAutofill="no" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/annotation"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/annotation_label"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            android:importantForAutofill="no" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

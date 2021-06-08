@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CarFind</string>
+    <string name="action_sample_data">Beispieldaten hinzufügen</string>
+    <string name="action_clear_list">Liste leeren</string>
+    <string name="delete_undo">Rückgängig</string>
+    <string name="navigation_button_alternative">Navigation starten</string>
+    <string name="thumbnail_alternative">Auto Vorschaubild</string>
+    <string name="edit_button">Bearbeiten</string>
+    <string name="search">Suchen</string>
+    <string name="add_car_activity_name">Neues Auto hinzufügen</string>
+    <string name="edit_car_activity_name">Auto bearbeiten</string>
+    <string name="car_model_label">Automodell</string>
+    <string name="licence_plate_label">Kennzeichen</string>
+    <string name="level_label">Ebene</string>
+    <string name="parking_spot_label">Platz</string>
+    <string name="annotation_label">Anmerkung</string>
+    <string name="save_button">Speichern</string>
+    <string name="error_not_filled_out">Bitte die erforderlichen Felder ausfüllen!</string>
+    <string name="location_is_searched">Suche Position</string>
+    <string name="no_location">Keine Position</string>
+    <string name="location_found">Position gefunden</string>
+    <string name="toast_missing_camera_permission">Kamera-Berechtigung wird benötigt, um Fotos aufzunehmen.</string>
+    <string name="camera_icon_alternative">Foto aufnehmen</string>
+    <string name="photo_alternative">Aufgenommenes Foto</string>
+    <string name="no_photo_alternative">Kein Bild aufgenommen</string>
+    <string name="location_icon_alternative">Position gefunden</string>
+    <string name="no_location_icon_alternative">Position nicht gefunden</string>
+    <string name="addCarShortcut">Auto hinzufügen</string>
+    <string name="addCarShortcutLong">Neues Auto der Liste hinzufügen</string>
+    <string name="start_navigation">Navigation starten</string>
+</resources>

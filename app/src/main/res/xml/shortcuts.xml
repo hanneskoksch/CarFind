@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="addCarShortcut"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:shortcutShortLabel="@string/addCarShortcut"
+        android:shortcutLongLabel="@string/addCarShortcutLong" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="de.hdmstuttgart.carfind"
+            android:targetClass="de.hdmstuttgart.carfind.MainActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="de.hdmstuttgart.carfind"
+            android:targetClass="de.hdmstuttgart.carfind.AddCarActivity" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>
